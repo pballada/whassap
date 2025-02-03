@@ -63,24 +63,6 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             ZStack {
                 WhatsAppWebView(url: URL(string: "https://web.whatsapp.com")!, webView: $webView)
-                
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            webView?.reload()
-                        }) {
-                            Image(systemName: "arrow.clockwise")
-                                .font(.system(size: 20))
-                                .padding()
-                                .background(Color.black.opacity(0.7))
-                                .foregroundColor(.white)
-                                .clipShape(Circle())
-                        }
-                        .padding()
-                    }
-                }
             }
             .edgesIgnoringSafeArea(.all)
             .tabItem {
